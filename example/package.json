@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "description": "project",
+  "scripts": {
+    "dev": "sfnode --run=dev",
+    "dev:client": "sfnode --run=dev:client",
+    "dev:server": "nodemon -w ./web -w ./server --exec 'sfnode --run=dev:server'",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "sfnode --run=build:client",
+    "build:server": "sfnode --run=build:server",
+    "start": " sfnode --run=start"
+  },
+  "author": "thinkzhan",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sfapp": "^0.0.2"
+  }
+}

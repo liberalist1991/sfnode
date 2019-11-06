@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ./layout/header.ejs %>
+</head>
+
+<% if (typeof pageName != 'undefined') {%>
+<body data-pageName="<%=pageName%>">
+<%}else{%>
+<body>
+<%}%>
+    <div id="root"><%-ssr_content%></div>
+
+    <script>
+        window.__INITIAL_STATE__ = <%- JSON.stringify(ssr_state) %>;
+    </script>
+
+    <% include ./layout/footer.ejs %>
+</body>
+</html>

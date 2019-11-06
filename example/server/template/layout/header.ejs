@@ -1,0 +1,19 @@
+<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+<% if (typeof tdk != 'undefined') {%>
+<title><%= tdk.title %></title>
+<meta name="keywords" content="<%=tdk.keywords%>" />
+<meta name="description" content="<%=tdk.description%>" />
+<% } else {%>
+    <title></title>
+<%}%>
+
+<% if (typeof ssr_assets != 'undefined') {%>
+    <% if (ssr_assets.vendor && ssr_assets.vendor.css) {%>
+        <link rel="stylesheet" type="text/css" href="<%=ssr_assets.vendor.css%>" />
+    <%}%>
+    <% if (ssr_assets[pageName] && ssr_assets[pageName].css) {%>
+        <link rel="stylesheet" type="text/css" href="<%=ssr_assets[pageName].css%>" />
+    <%}%>
+<%}%>

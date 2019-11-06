@@ -1,0 +1,18 @@
+{
+    "apps": [
+      {
+        "name": "example",
+        "script": "npm run start",
+        "log_date_format": "\"YYYY-MM-DD HH:mm:ss.SSS\"",
+        "error_file": "/home/work/logs/err.log",
+        "out_file": "/home/work/logs/out.log",
+        "merge_logs": true,
+        "instances" : "4",
+        "exec_mode" : "cluster",
+        "max_memory_restart": "1024M",
+        "env": {
+          "NODE_ENV": "production"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,8 @@
+<% if (typeof ssr_assets != 'undefined') {%>
+    <% if (ssr_assets.vendor) {%>
+    <script src="<%=ssr_assets.vendor.js%>"></script>
+    <%}%>
+    <% if (ssr_assets[pageName]) {%>
+    <script src="<%=ssr_assets[pageName].js%>"></script>
+    <%}%>
+<%}%>

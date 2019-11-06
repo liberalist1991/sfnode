@@ -1,0 +1,51 @@
+{
+  "name": "sfnode",
+  "version": "0.0.6",
+  "description": "node cli & compiler",
+  "bin": {
+    "sfnode": "./bin/build.js"
+  },
+  "main": "index.js",
+  "author": "thinkzhan",
+  "license": "ISC",
+  "files": [
+    "bin",
+    "run",
+    "babel.config.js",
+    "example"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.5.5",
+    "@babel/runtime": "^7.0.0-beta.55",
+    "assets-webpack-plugin": "^3.9.10",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "fs-extended": "^0.2.1",
+    "glob": "^7.1.4",
+    "html-webpack-plugin": "^3.2.0",
+    "isomorphic-style-loader": "^5.1.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "module-alias": "^2.2.0",
+    "node-sass": "^4.12.0",
+    "optimist": "^0.6.1",
+    "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.12.9",
+    "sass-loader": "^7.1.0",
+    "shelljs": "^0.8.3",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  }
+}
