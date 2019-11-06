@@ -1,6 +1,6 @@
 {
   "name": "sfnode",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "node cli & compiler",
   "bin": {
     "sfnode": "./bin/build.js"
@@ -14,6 +14,10 @@
     "babel.config.js",
     "example"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:liberalist1991/sfnode.git"
+  },
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",

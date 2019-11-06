@@ -1,8 +1,11 @@
 const path = require('path')
+const extend = require('./build/extend')
 const config = require(process.cwd() + '/build.js');
 const resolve = dir => path.resolve(process.cwd(), dir);
+
 global.config = extend({
     server: {
+        port: 8080,
         public: resolve('public'),
         path: resolve('public/server')
     },
@@ -20,24 +23,3 @@ global.config = extend({
 }, config)
 
 module.exports = global.config
-
-function extend(target, cloneObj) {
-    function type(obj) {
-        return Object.prototype.toString.call(obj).slice(8, -1);
-    }
-    var copy;
-    for (var i in cloneObj) {
-        copy = cloneObj[i];
-        if (target === copy) {
-            continue;
-        }
-        if (type(copy) === "Array") {
-            target[i] = extend(target[i] || [], copy);
-        } else if (type(copy) === "Object") {
-            target[i] = extend(target[i] || {}, copy);
-        } else {
-            target[i] = copy;
-        }
-    }
-    return target;
-}

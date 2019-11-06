@@ -35,7 +35,7 @@ exports.getAlias = () => ({
 
 exports.htmlPlugin = () => {
     const clientTmpl = resolve('server/template/index.html')
- 
+
     if (!fs.existsSync(clientTmpl)) {
         return []
     }
@@ -58,6 +58,6 @@ exports.htmlPlugin = () => {
         }
         arr.push(new HtmlWebpackPlugin(conf));
     });
-    
+
     return arr;
 };

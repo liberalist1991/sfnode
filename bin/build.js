@@ -5,6 +5,7 @@ var optimist = require('optimist').usage(
 );
 
 require('./config-optimist')(optimist);
+
 var options = require('./convert-argv')(optimist, optimist.argv);
 
 function processOptions(options) {
@@ -12,32 +13,31 @@ function processOptions(options) {
     switch (options.run) {
         case 'dev:client':
             global.NODE_ENV = 'development';
-            global.START_MODE = 'dev:server';
-            require('../run/dev-client.js');
+            require('../run/dev-client');
             break;
         case 'dev:server':
             global.NODE_ENV = 'development';
             global.START_MODE = 'dev:server';
-            require('../run/dev-server.js');
+            require('../run/dev-server');
             break;
         case 'dev':
             global.NODE_ENV = 'development';
             global.START_MODE = 'dev:server';
-            require('../run/dev-client.js');
-            require('../run/dev-server.js');
+            require('../run/dev-client');
+            require('../run/dev-server');
             break;
         case 'build:client':
-            require('../run/build-client.js');
+            require('../run/build-client');
             break;
         case 'build:server':
-            require('../run/build-server.js');
+            require('../run/build-server');
             break;
         case 'build':
-            require('../run/build-client.js');
-            require('../run/build-server.js');
+            require('../run/build-client');
+            require('../run/build-server');
             break;
         case 'start':
-            require('../run/start.js');
+            require('../run/start');
             break;
     }
 }

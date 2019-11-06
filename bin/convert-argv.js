@@ -27,8 +27,8 @@ module.exports = function (optimist, argv, convertOptions) {
     global.struct = {
       assetsMap: path.resolve(process.cwd(), 'public/assets.json'),
       web: path.resolve(process.cwd(), 'web'),
-      server:  path.resolve(process.cwd(), 'server'),
-      page:  path.resolve(process.cwd(), 'web/page'),
+      server: path.resolve(process.cwd(), 'server'),
+      page: path.resolve(process.cwd(), 'web/page'),
       template: path.resolve(process.cwd(), 'server/template'),
     }
   }

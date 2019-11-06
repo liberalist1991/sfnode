@@ -1,8 +1,9 @@
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const webpackBaseConf = require('./webpack.client.base');
-// const config = require('../config/build').client.development;
 const config = require('../config').client.development;
+const getIp = require('./localIP')
+
 const webpackConf = {
     output: {
         path: config.path,
@@ -14,7 +15,7 @@ const webpackConf = {
     devtool: '#eval-source-map',
     watch: true,
     devServer: {
-        host: '0.0.0.0',
+        host: getIp(),
         disableHostCheck: true,
         port: config.port,
         contentBase: config.path,

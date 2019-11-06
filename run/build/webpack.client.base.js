@@ -33,14 +33,14 @@ module.exports = {
     },
     resolveLoader: {
         modules: [
-            resolve('node_modules'), 
+            resolve('node_modules'),
             path.resolve(__dirname, '../../node_modules')
         ]
     },
     resolve: {
         extensions: ['.jsx', '.js'],
         modules: [
-            resolve('node_modules'), 
+            resolve('node_modules'),
             path.resolve(__dirname, '../../node_modules')
         ],
         alias: getAlias(),
